@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space Mono">
+    <script type="text/javascript" src="app.js">
+    </script>
+    <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+
+<body>
+    <div class="imgWrapper">
+        <img alt="logo" src="/images/logo.svg" />
+    </div>
+    <div class="container">
+        <div class="main">
+            <div class="leftSide">
+                <div class="billSection">
+                    <label for="bill" class="label">Bill</label>
+                    <input class="billInput" placeholder="0" type="number" id="bill">
+                    <img class="dollarIcon" src="/images/icon-dollar.svg" alt="dollar">
+                </div>
+                <div class="tipSection">
+                    <label class="label">Select Tip %</label>
+                    <div class="tipContainer">
+                        <button onclick="changeColor(this)" id="tip" class="tips-item"> 5% </button>
+                        <button onclick="changeColor(this)" id="tip" class="tips-item"> 10% </button>
+                        <button onclick="changeColor(this)" id="tip" class="tips-item"> 15% </button>
+                        <button onclick="changeColor(this)" id="tip" class="tips-item"> 25% </button>
+                        <button onclick="changeColor(this)" id="tip" class="tips-item"> 50% </button>
+                        <input onclick="customise()" id="custom" type="number" placeholder="Custom" class="tips-item custom-tip">
+                    </div>
+                </div>
+                <div class="peopleSection">
+                    <div class="sectionTopic">
+                        <label for="people" class="label">Number of People</label>
+                        <span class="error" id="error" >Cant be zero</span>
+                    </div>
+                    <input class="peopleInput" placeholder="0" type="number" id="persons">
+                    <img class="userIcon" src="/images/icon-person.svg" alt="user">
+                </div>
+            </div>
+            <div class="rightSide">
+                <div class="tipPerPerson">
+                    <div class="textSide">
+                        <h3>Tip Amount</h3>
+                        <p>/ person</p>
+                    </div>
+                    <div class="amountSide">
+                        $ <span class="tip-amount" >0.00</span>
+                    </div>
+                </div>
+                <div class="totalPerson">
+                    <div class="textSide">
+                        <h3>Total</h3>
+                        <p>/ person</p>
+                    </div>
+                    <div class="amountSide">
+                        $ <span class="total-amount" >0.00</span>
+                    </div>
+                </div>
+                <button onclick="reset()" id="reset" class="reset">
+                    reset
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor /
+                BitCamp</a>.
+            Coded by <a target="_blank" href="https://www.linkedin.com/in/givi-chlikadze-2a91b0241/">Giviko</a>.
+        </div>
+    </footer>
+</body>
+<!--<script src="app.js"></script>-->
+</html>
